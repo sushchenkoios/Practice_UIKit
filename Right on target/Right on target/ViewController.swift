@@ -62,6 +62,20 @@ class ViewController: UIViewController {
         print("viewDidDisappear")
     }
     
+    // Лінива властивість для зберігання View Controller
+    lazy var secondViewController: SecondViewController = getSecondViewController()
+    
+    // Приватний метод, що завантажує View Controller
+    private func getSecondViewController() -> SecondViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "SecondViewController")
+        return viewController as! SecondViewController
+    }
+    
+    @IBAction func showNextScreen() {
+        self.present(secondViewController, animated: true)
+    }
+    
     @IBAction func checkNumber() {
         
         // Отримуємо значення на слайдері

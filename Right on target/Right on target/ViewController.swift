@@ -12,38 +12,37 @@ class ViewController: UIViewController {
     @IBOutlet var slider: UISlider!
     @IBOutlet var label: UILabel!
     
-    // загаданное число
+    // Загадане число
     var number: Int = 0
-    // раунд
+    // Раунд
     var round: Int = 0
-    // сумма очков за раунд
+    // Сума очок за раунд
     var points: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // генерируем случайное число
+        // Генеруємо випадкове число
         self.number = Int.random(in: 1...50)
-        // передаем значение случайного числа в label
+        // Передаємо значення випадкового числа в label
         self.label.text = String(self.number)
         
     }
     
     @IBAction func checkNumber() {
         
-        //        // если игра только начинается
+        // Якщо гра тільки починається
         if self.round == 0 {
-            // генерируем случайное число
+            // Генеруємо випадкове число
             self.number = Int.random(in: 1...50)
-            // передаем значение случайного числа в label
+            // Передаємо значення випадкового числа в label
             self.label.text = String(self.number)
-            // устанавливаем счетчик раундов на 1
+            // Встановлюємо лічильник раундів на 1
             self.round = 1
         } else {
-            // получаем значение на слайдере
+            // Отримуємо значення на слайдері
             let numSlider = Int(self.slider.value)
-            // сравниваем значение с загаданным
-            // и подсчитываем очки
+            // Порівнюємо значення із загаданим та підраховуємо очки
             if numSlider > self.number {
                 self.points += 50 - numSlider + self.number
             } else if numSlider < self.number {
@@ -52,13 +51,12 @@ class ViewController: UIViewController {
                 self.points += 50
             }
             if self.round == 5 {
-                // АЛЕРТ выводим информационное окно
-                // с результатами игры
+                // АЛЕРТ виводимо інформаційне вікно з результатами гри
                 let alert = UIAlertController(
-                    title: "Игра окончена",
-                    message: "Вы заработали \(self.points) очков",
+                    title: "Гру закінчено",
+                    message: "Ви заробили \(self.points) очків",
                     preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Начать заново", style:
+                alert.addAction(UIAlertAction(title: "Почати заново", style:
                         .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 self.round = 1
@@ -66,9 +64,9 @@ class ViewController: UIViewController {
             } else {
                 self.round += 1
             }
-            // генерируем случайное число
+            // Генеруємо випадкове число
             self.number = Int.random(in: 1...50)
-            // передаем значение случайного числа в label
+            // Передаємо значення випадкового числа в label
             self.label.text = String(self.number)
         }
     }

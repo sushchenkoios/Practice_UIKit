@@ -40,10 +40,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHz-GO-O57">
+                                <rect key="frame" x="738" y="379" width="138" height="35"/>
+                                <color key="tintColor" red="0.2736026842" green="0.58297821969999997" blue="0.45332519440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Про програму"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PHz-GO-O57" secondAttribute="bottom" id="2jM-7s-Bgb"/>
                             <constraint firstItem="ihe-58-JfQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6hT-Ny-abT"/>
                             <constraint firstItem="JAB-N2-LWE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DSy-bi-NI4"/>
                             <constraint firstItem="jaf-Ct-yHQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HCv-eO-geV"/>
@@ -53,6 +60,7 @@
                             <constraint firstItem="ihe-58-JfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dyX-2q-kaQ"/>
                             <constraint firstItem="JAB-N2-LWE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pmh-Op-Gr0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JAB-N2-LWE" secondAttribute="bottom" constant="30" id="roP-aC-1yH"/>
+                            <constraint firstAttribute="trailing" secondItem="PHz-GO-O57" secondAttribute="trailing" constant="20" id="uLH-6C-cLl"/>
                         </constraints>
                     </view>
                     <connections>
@@ -64,10 +72,39 @@
             </objects>
             <point key="canvasLocation" x="19.014084507042256" y="66.412213740458014"/>
         </scene>
+        <!--Second View Controller-->
+        <scene sceneID="KT8-qc-ec0">
+            <objects>
+                <viewController id="lLi-lS-wGI" customClass="SecondViewController" customModule="Right_on_target" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ye-e1-tox">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5J-up-WEv">
+                                <rect key="frame" x="411.5" y="189.5" width="73.5" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Назад"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x4Z-nn-YE3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o5J-up-WEv" firstAttribute="centerX" secondItem="2ye-e1-tox" secondAttribute="centerX" id="JTt-RK-TYv"/>
+                            <constraint firstItem="o5J-up-WEv" firstAttribute="centerY" secondItem="2ye-e1-tox" secondAttribute="centerY" id="aIh-d6-ybc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKe-Vr-w0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="838"/>
+        </scene>
     </scenes>
     <resources>
         <image name="01.square.fill" catalog="system" width="128" height="114"/>
         <image name="50.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
